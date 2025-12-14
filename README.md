@@ -90,3 +90,8 @@ Training scripts live in [`NeRV/`](NeRV) ([`train_nerv_all.py`](NeRV/train_nerv_
     --dump_images
   ```
 - For other datasets, use `run_davis.bash` or `run_mcl.bash` as templates and adjust `data_path` and dataset lists.
+
+## Acknowledgement
+Our code is based on [HNeRV](https://github.com/haochen-rye/HNeRV).
+## Contact
+hayatai17@fuji.waseda.jp
