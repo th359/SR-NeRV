@@ -2,7 +2,7 @@
 [<img src="https://img.shields.io/badge/GCCE 2025-lightgray.svg?style=flat&logo=java">](https://www.ieee-gcce.org/2025/index.html)
 [![arXiv](https://img.shields.io/badge/arXiv-2409.18497-b31b1b.svg)](https://arxiv.org/abs/2505.00046)
 
-Lightweight super-resolution pretraining (`sr/`) and NeRV/HNeRV video representation training (`NeRV/`).
+Lightweight super-resolution pretraining ([`sr/`](sr)) and NeRV/HNeRV video representation training ([`NeRV/`](NeRV)).
 
 ## Environment Setup
 - Recommended: Python 3.8+ and CUDA-enabled PyTorch.
@@ -16,7 +16,7 @@ Lightweight super-resolution pretraining (`sr/`) and NeRV/HNeRV video representa
   ```
 
 ## Train the SR model (DIV2K pretraining)
-`sr/train.py` assumes DIV2K HR/LR pairs.
+[`sr/train.py`](sr/train.py) assumes DIV2K HR/LR pairs.
 
 - Example layout when `--data_dir DIV2K`:
 - DIV2K can be downloaded from: [here](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
@@ -27,7 +27,7 @@ Lightweight super-resolution pretraining (`sr/`) and NeRV/HNeRV video representa
     DIV2K_valid_HR
     DIV2K_valid_LR_bicubic/X2
   ```
-- Quick start: `sr/run.bash` includes a preset command; edit `data_path`/`out_path` inside the script and run `bash run.bash`.
+- Quick start: [`sr/run.bash`](sr/run.bash) includes a preset command; edit `data_path`/`out_path` inside the script and run `bash run.bash`.
   ```bash
   cd sr
   bash run.bash
@@ -51,7 +51,7 @@ Lightweight super-resolution pretraining (`sr/`) and NeRV/HNeRV video representa
 - Checkpoints (e.g., `best_model.pth`) are saved under `--output` and are used as `--sr_weight` for NeRV/HNeRV training.
 
 ## Train NeRV / HNeRV models
-Training scripts live in `NeRV/` (`train_nerv_all.py` and `run_*.bash`). Point `sr_weight` to the SR checkpoint from above.
+Training scripts live in [`NeRV/`](NeRV) ([`train_nerv_all.py`](NeRV/train_nerv_all.py) and `run_*.bash`). Point `sr_weight` to the SR checkpoint from above.
 
 - Example: bunny dataset
   ```bash
