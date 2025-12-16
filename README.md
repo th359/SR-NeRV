@@ -18,8 +18,8 @@ Lightweight super-resolution pretraining ([`sr/`](sr)) and NeRV/HNeRV video repr
 ## Train the SR model (DIV2K pretraining)
 [`sr/train.py`](sr/train.py) assumes DIV2K HR/LR pairs.
 
-- Example layout when `--data_dir DIV2K`:
 - DIV2K can be downloaded from: [here](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
+- Example layout when `--data_dir dataset/DIV2K`:
   ```
   dataset/DIV2K/
     DIV2K_train_HR
